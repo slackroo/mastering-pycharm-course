@@ -39,10 +39,8 @@ def get_max_episode_id() -> int:
 
 def get_details(episode_id: int) -> Optional[Episode]:
     """
-    This will return the episode details for the episode with ID episode_id.
-
-    :param episode_id: The ID of the episode as an int.
-    :return: The episode details if found, otherwise None.
+    This will return the episode details for the episode with ID  episode_id.
+    :param episode_id: The ID of an episode as an int.
+    :return: The episode details if found, otherwise None
     """
-
     return episodes.get(episode_id)

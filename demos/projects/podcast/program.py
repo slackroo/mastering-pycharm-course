@@ -1,7 +1,5 @@
 import service
 
-__VERSION__ = "2.1"
-
 
 def main():
     print_header()
@@ -10,9 +8,9 @@ def main():
 
 
 def print_header():
-    print("------------------------------------------")
-    print(f"  TALK PYTHON PODCAST DOWNLOADER v{__VERSION__}")
-    print("------------------------------------------")
+    print("-" * 60)
+    print("       Testing new things Podcast downloader")
+    print("-" * 60)
 
 
 def show_titles():
@@ -25,8 +23,10 @@ def show_titles():
 
 def show_episode_details(episode_id: int):
     episode = service.get_details(episode_id)
-    print(f'{episode.id}. -> {episode.title}')
+    print(f'#{episode.id} ⟶ {episode.title}')
 
 
+# This means this is directly invoked and not imported
+# pycharm these are live templates
 if __name__ == '__main__':
     main()
